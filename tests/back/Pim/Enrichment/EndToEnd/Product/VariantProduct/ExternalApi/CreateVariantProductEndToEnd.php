@@ -1144,7 +1144,7 @@ JSON;
                 ],
                 [
                     'property' => 'attribute',
-                    'message' => 'Cannot set the property "sku" to this entity as it is not in the attribute set'
+                    'message' => 'The sku attribute is not available for this product family.'
                 ]
             ],
         ];

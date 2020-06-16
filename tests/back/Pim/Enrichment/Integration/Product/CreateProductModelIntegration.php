@@ -202,7 +202,7 @@ class CreateProductModelIntegration extends TestCase
 
         $errors = $this->get('pim_catalog.validator.product_model')->validate($productModel);
         $this->assertEquals(
-            'Cannot set the property "sku" to this entity as it is not in the attribute set',
+            'The sku attribute is not available for this product family.',
             $errors->get(0)->getMessage()
         );
     }

@@ -43,7 +43,7 @@ class OnlyExpectedAttributesValidationIntegration extends TestCase
         $violations = $this->get('pim_catalog.validator.product')->validate($variantProduct);
 
         $this->assertCount(1, $violations);
-        $this->assertSame('Cannot set the property "variation_name" to this entity as it is not in the attribute set', $violations->get(0)->getMessage());
+        $this->assertSame('The variation_name attribute is not available for this product family.', $violations->get(0)->getMessage());
         $this->assertSame('attribute', $violations->get(0)->getPropertyPath());
     }
 
